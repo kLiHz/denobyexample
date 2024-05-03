@@ -138,7 +138,7 @@ export function parseExample(id: string, file: string): Example {
         parseMode = "code";
       }
     } else if (parseMode == "file") {
-      if (line == "*/") {
+      if (trimmedLine.startsWith("*/")) {
         parseMode = "code";
       } else {
         code += line + "\n";
